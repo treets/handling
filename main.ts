@@ -15,7 +15,7 @@ namespace handling {
         const current = kin.values;
         MotionLib.kinCmdBlendP(kin.name, maxHeight - startHeight, maxHeight - startHeight);
         tools.log(pos.get(0));
-        MotionLib.kinCmdMoveLinAbs(kin.name, [current[0], current[1], current[2] + maxHeight], vel, acc, acc, 0, 0);
+        MotionLib.kinCmdMoveLinAbs(kin.name, [current.get(0), current.get(1), current.get(2) + maxHeight], vel, acc, acc, 0, 0);
         MotionLib.kinCmdBlend(kin.name, maxHeight - endHeight, maxHeight - endHeight);
         MotionLib.kinCmdMoveLinAbs(kin.name, [pos.get(0), pos.get(1), pos.get(2) + maxHeight], vel, acc, acc, 0, 0);
         MotionLib.kinCmdMoveLinAbs(kin.name, pos, vel, acc, acc, 0, 0);
