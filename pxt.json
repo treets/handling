@@ -4,7 +4,8 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "motion": "*"
+        "motion": "*",
+        "ctrlx": "*"
     },
     "files": [
         "README.md",
@@ -18,5 +19,5 @@
     "supportedTargets": [
         "tiger"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
