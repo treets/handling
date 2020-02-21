@@ -14,6 +14,8 @@ namespace handling {
     export function moveJumpAbsolute(kin: motion.Kinematic, pos: number[], vel: number, acc: number, startHeight: number, endHeight: number, maxHeight: number) {
         const current = kin.values;
         MotionLib.kinCmdBlendP(kin.name, maxHeight - startHeight, maxHeight - startHeight);
+        tools.log(current);
+        tools.log(pos);
         MotionLib.kinCmdMoveLinAbs(kin.name, [current[0], current[1], current[2] + maxHeight], vel, acc, acc, 0, 0);
         MotionLib.kinCmdBlend(kin.name, maxHeight - endHeight, maxHeight - endHeight);
         MotionLib.kinCmdMoveLinAbs(kin.name, [pos[0], pos[1], pos[2] + maxHeight], vel, acc, acc, 0, 0);
