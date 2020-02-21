@@ -1,0 +1,22 @@
+{
+    "name": "handling",
+    "version": "0.0.0",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "motion": "*"
+    },
+    "files": [
+        "README.md",
+        "main.blocks",
+        "main.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "supportedTargets": [
+        "tiger"
+    ],
+    "preferredEditor": "blocksprj"
+}
