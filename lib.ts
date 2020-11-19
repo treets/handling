@@ -10,6 +10,8 @@ namespace handling {
      * @param max the total maximum height of movement
      */
     //% block="jump %kin to positions %pos at %vel with %acc acceleration blending from %startHeight to %endHeight limited by %maxHeight"
+    //% kin.fieldEditor="configInstance"
+    //% kin.fieldOptions.property="kins"
     //% inlineInputMode=inline
     export function moveJumpAbsolute(kin: motion.Kinematic, pos: number[], vel: number, acc: number, startHeight: number, endHeight: number, maxHeight: number) {
         const current = kin.values;
