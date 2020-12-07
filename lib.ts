@@ -15,6 +15,12 @@ namespace handling {
     //% inlineInputMode=inline
     export function moveJumpAbsolute(kin: motion.Kinematic, pos: number[], vel: number, acc: number, startHeight: number, endHeight: number, maxHeight: number) {
         const current = kin.values;
+        
+        for (let i = pos.length; i < 16; i++) {
+            pos.push(0);
+            current.push(0);
+        }
+        
         MotionLib.kinCmdBlendP(kin.name, maxHeight - startHeight, maxHeight - startHeight);
         MotionLib.kinCmdMoveLinAbs(kin.name, [current[0], current[1], current[2] + maxHeight], 'PCS', vel, acc, acc, 0, 0);
         MotionLib.kinCmdBlend(kin.name, maxHeight - endHeight, maxHeight - endHeight);
