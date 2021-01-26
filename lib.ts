@@ -19,14 +19,14 @@ namespace handling {
         const second = [pos[0], pos[1], maxHeight];
 		
         for (let i = pos.length; i < 16; i++) {
-            pos.push(0);
-            first.push(0);
-            second.push(0);
+            pos.push[0];
+            first.push[0];
+            second.push[0];
         }
 		
-        MotionLib.kinCmdBlendP(kin.name, maxHeight - current(2) - startHeight, (Math.sqrt(Math.pow((pos(0)-current(0)),2) + Math.pow((pos(1)-current(1)),2))/2) );		
+        MotionLib.kinCmdBlendP(kin.name, maxHeight - current[2] - startHeight, (Math.sqrt(Math.pow((pos[0]-current[0]),2) + Math.pow((pos[1]-current[1]),2))/2) );		
         MotionLib.kinCmdMoveLinAbs(kin.name, first, 'PCS', vel, acc, acc, 0, 0);		
-        MotionLib.kinCmdBlend( ((Math.sqrt(Math.pow((pos(0)-current(0)),2) + Math.pow((pos(1)-current(1)),2))/2) , kin.name, maxHeight - pos(2) - endHeight);		
+        MotionLib.kinCmdBlend( ((Math.sqrt(Math.pow((pos[0]-current[0]),2) + Math.pow((pos[1]-current[1]),2))/2) , kin.name, maxHeight - pos[2] - endHeight);		
         MotionLib.kinCmdMoveLinAbs(kin.name, second, 'PCS', vel, acc, acc, 0, 0);		
         MotionLib.kinCmdMoveLinAbs(kin.name, pos, 'PCS', vel, acc, acc, 0, 0);
 		
